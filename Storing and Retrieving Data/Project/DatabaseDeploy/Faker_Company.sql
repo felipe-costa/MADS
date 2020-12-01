@@ -1,0 +1,1 @@
+INSERT INTO `company` (`id`, `name`, `vat_number`, `created_date`, `street_address_1`, `street_address_2`, `city`, `state`, `country`, `phone_number`, `email_address`, `website`) VALUES (1, 'SuperDuperStore', 'PT999999999', '2017-01-01', 'Rua 1', 'Porta 1', 'Lisboa', 'Lisboa', 'Portugal', '+351911112233', 'customerSupport@SuperDuperStore.com', 'www.superduperstore.com');

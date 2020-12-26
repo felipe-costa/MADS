@@ -29,7 +29,7 @@ WHERE invoice_date > DATE_SUB(CURRENT_DATE(),INTERVAL 1 YEAR) -- Filters the Inv
 GROUP BY IVC.client_id -- Groups the data by Client ID
 ORDER BY 2 DESC -- Order by the second column (Average Spend)
 LIMIT 3 -- Retrieve only the top 3 customers
-
+;
 
 -- QUERY G-3
 select 
@@ -47,7 +47,7 @@ from
         DATE_FORMAT(MAX(invoice_date),'%Y/%m') AS MaxDate  -- Computes the Maximum date in the Database
 	FROM invoices IVC
 ) aux
-
+;
 
 -- QUERY G-4
 SELECT
@@ -58,7 +58,7 @@ INNER JOIN clients C -- Joins with the clients table to retrieve the city field
 	ON IVC.client_id = C.id
 GROUP BY C.city
 ORDER BY 2 DESC -- Order by the second column (Total Spend)
-
+;
 
 -- QUERY G-5
 SELECT 
@@ -71,3 +71,4 @@ INNER JOIN products P -- Joins with the produtcs table to retrieve the avg_ratin
 INNER JOIN clients C -- Joins with the clients table to retrieve the city field
 	ON IVC.client_id = C.id
 WHERE P.avg_rating IS NOT NULL -- Filter by products which have a rating
+;
